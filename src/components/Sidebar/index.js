@@ -1,10 +1,12 @@
 import './index.scss';
-import { useState } from 'react';
+import { React, useState } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   faLinkedin,
   faGithub,
-  faYoutube,
+  faGitlab,
   faMedium,
 } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -16,8 +18,8 @@ import {
   faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
-import LogoSubtitle from '../../assets/images/Gilbert-logos.jpeg';
-import LogoS from '../../assets/images/webtech.png';
+import LogoSubtitle from '../../assets/images/gilbert.png';
+import LogoG from '../../assets/images/g.png';
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -29,7 +31,7 @@ const Sidebar = () => {
         to="/"
         onClick={() => setShowNav(false)}
       >
-        <img src={LogoS} alt="Logo" />
+        <img src={LogoG} alt="Logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="gilbert" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
@@ -102,12 +104,12 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://www.youtube.com/channel/UC7RLVeh85A4G1JAL5TS1plQ"
+            href="https://gitlab.com/"
             rel="noreferrer"
             target="_blank"
           >
             <FontAwesomeIcon
-              icon={faYoutube}
+              icon={faGitlab}
               color="#4d4d4e"
               className="anchor-icon"
             />
